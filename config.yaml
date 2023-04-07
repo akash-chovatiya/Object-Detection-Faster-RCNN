@@ -1,0 +1,25 @@
+path:
+    labels_path: data\statistical_info\all_labels_training.pkl
+    dataset_path: data\augmented_data
+    result_path: data\model_info
+    
+optuna:
+    saved_study: False
+    time_stamp: dd-mm-yyyy # if saved_study is True then mention the time-stamp
+    trials: 1
+
+dl:
+    batch_size: 3
+    num_workers: 5
+    shuffle: False
+    visualize_img: False
+    MAP_PER_CLASS: True
+    
+h-params:
+    NUM_EPOCHS: 10
+    model: efficientnet_b0
+    optimizer: Adagrad
+    pretrained: False
+    learning_rate: [1e-4, 1e-2]
+    momentum: [0.8, 0.95]
+    weight_decay: [1e-4, 1e-3]
